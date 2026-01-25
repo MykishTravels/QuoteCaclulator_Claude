@@ -1,0 +1,887 @@
+{
+  "currencies": [
+    {
+      "code": "USD",
+      "name": "United States Dollar",
+      "symbol": "$",
+      "decimal_places": 2
+    },
+    {
+      "code": "EUR",
+      "name": "Euro",
+      "symbol": "€",
+      "decimal_places": 2
+    },
+    {
+      "code": "GBP",
+      "name": "British Pound",
+      "symbol": "£",
+      "decimal_places": 2
+    },
+    {
+      "code": "AUD",
+      "name": "Australian Dollar",
+      "symbol": "A$",
+      "decimal_places": 2
+    }
+  ],
+  "resorts": [
+    {
+      "id": "RST-001",
+      "name": "Azure Paradise Resort & Spa",
+      "destination": "Maldives",
+      "atoll": "North Malé Atoll",
+      "description": "Luxury 5-star resort with overwater villas and pristine beaches",
+      "star_rating": 5,
+      "default_currency_code": "USD",
+      "default_markup_configuration_id": "MKP-001",
+      "transfer_required": true,
+      "transfer_required_reason": "Resort accessible only by seaplane or speedboat from Malé airport",
+      "transfer_time_from_airport_minutes": 35,
+      "allow_default_season_fallback": true,
+      "default_season_id": "SEA-002",
+      "require_adult_guest": false,
+      "contact_email": "reservations@azureparadise.mv",
+      "is_active": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2025-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "RST-002",
+      "name": "Coral Dreams Island Resort",
+      "destination": "Maldives",
+      "atoll": "South Ari Atoll",
+      "description": "Boutique resort famous for whale shark encounters",
+      "star_rating": 5,
+      "default_currency_code": "USD",
+      "default_markup_configuration_id": "MKP-001",
+      "transfer_required": true,
+      "transfer_required_reason": "25-minute seaplane from Malé",
+      "transfer_time_from_airport_minutes": 25,
+      "allow_default_season_fallback": true,
+      "default_season_id": "SEA-005",
+      "require_adult_guest": false,
+      "contact_email": "reservations@coraldreams.mv",
+      "is_active": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2025-01-01T00:00:00.000Z"
+    }
+  ],
+  "childAgeBands": [
+    {
+      "id": "CAB-001",
+      "resort_id": "RST-001",
+      "name": "Infant",
+      "min_age": 0,
+      "max_age": 1,
+      "description": "Complimentary for most services"
+    },
+    {
+      "id": "CAB-002",
+      "resort_id": "RST-001",
+      "name": "Toddler",
+      "min_age": 2,
+      "max_age": 5,
+      "description": "Green Tax exempt under 2"
+    },
+    {
+      "id": "CAB-003",
+      "resort_id": "RST-001",
+      "name": "Child",
+      "min_age": 6,
+      "max_age": 11,
+      "description": "Full child rates apply"
+    },
+    {
+      "id": "CAB-004",
+      "resort_id": "RST-002",
+      "name": "Infant",
+      "min_age": 0,
+      "max_age": 1,
+      "description": "Complimentary"
+    },
+    {
+      "id": "CAB-005",
+      "resort_id": "RST-002",
+      "name": "Toddler",
+      "min_age": 2,
+      "max_age": 5,
+      "description": "Reduced rates"
+    },
+    {
+      "id": "CAB-006",
+      "resort_id": "RST-002",
+      "name": "Child",
+      "min_age": 6,
+      "max_age": 11,
+      "description": "Child rates"
+    }
+  ],
+  "roomTypes": [
+    {
+      "id": "RT-001",
+      "resort_id": "RST-001",
+      "name": "Beach Villa",
+      "category": "villa",
+      "description": "Spacious beachfront villa with private garden",
+      "size_sqm": 85,
+      "view_type": "Beach",
+      "bed_configuration": "King or Twin",
+      "amenities": ["Private pool", "Outdoor shower", "Minibar", "WiFi"],
+      "max_occupancy_adults": 3,
+      "max_occupancy_children": 2,
+      "max_occupancy_total": 4,
+      "base_occupancy_adults": 2,
+      "base_occupancy_children": 0,
+      "is_active": true
+    },
+    {
+      "id": "RT-002",
+      "resort_id": "RST-001",
+      "name": "Overwater Villa",
+      "category": "overwater",
+      "description": "Iconic overwater villa with glass floor panels",
+      "size_sqm": 95,
+      "view_type": "Lagoon",
+      "bed_configuration": "King",
+      "amenities": ["Glass floor", "Direct lagoon access", "Sun deck", "Outdoor bathtub"],
+      "max_occupancy_adults": 2,
+      "max_occupancy_children": 1,
+      "max_occupancy_total": 3,
+      "base_occupancy_adults": 2,
+      "base_occupancy_children": 0,
+      "is_active": true
+    },
+    {
+      "id": "RT-003",
+      "resort_id": "RST-001",
+      "name": "Grand Water Villa with Pool",
+      "category": "overwater",
+      "description": "Premium overwater villa with private infinity pool",
+      "size_sqm": 150,
+      "view_type": "Ocean",
+      "bed_configuration": "King",
+      "amenities": ["Private pool", "Butler service", "Wine cellar", "Telescope"],
+      "max_occupancy_adults": 3,
+      "max_occupancy_children": 2,
+      "max_occupancy_total": 4,
+      "base_occupancy_adults": 2,
+      "base_occupancy_children": 0,
+      "is_active": true
+    },
+    {
+      "id": "RT-004",
+      "resort_id": "RST-002",
+      "name": "Sunset Beach Bungalow",
+      "category": "bungalow",
+      "description": "Thatched-roof bungalow facing the sunset",
+      "size_sqm": 70,
+      "view_type": "Beach/Sunset",
+      "bed_configuration": "King",
+      "amenities": ["Outdoor shower", "Hammock", "Snorkel gear"],
+      "max_occupancy_adults": 2,
+      "max_occupancy_children": 1,
+      "max_occupancy_total": 3,
+      "base_occupancy_adults": 2,
+      "base_occupancy_children": 0,
+      "is_active": true
+    }
+  ],
+  "seasons": [
+    {
+      "id": "SEA-001",
+      "resort_id": "RST-001",
+      "name": "Peak Season",
+      "description": "High demand period including Christmas and New Year",
+      "date_ranges": [
+        { "start_date": "2025-12-20", "end_date": "2026-01-10" },
+        { "start_date": "2026-12-20", "end_date": "2027-01-10" }
+      ]
+    },
+    {
+      "id": "SEA-002",
+      "resort_id": "RST-001",
+      "name": "High Season",
+      "description": "Dry season with best weather",
+      "date_ranges": [
+        { "start_date": "2025-01-11", "end_date": "2025-04-30" },
+        { "start_date": "2025-11-01", "end_date": "2025-12-19" },
+        { "start_date": "2026-01-11", "end_date": "2026-04-30" },
+        { "start_date": "2026-11-01", "end_date": "2026-12-19" }
+      ]
+    },
+    {
+      "id": "SEA-003",
+      "resort_id": "RST-001",
+      "name": "Low Season",
+      "description": "Monsoon season with occasional rain",
+      "date_ranges": [
+        { "start_date": "2025-05-01", "end_date": "2025-10-31" },
+        { "start_date": "2026-05-01", "end_date": "2026-10-31" }
+      ]
+    },
+    {
+      "id": "SEA-004",
+      "resort_id": "RST-002",
+      "name": "Peak Season",
+      "description": "Peak demand",
+      "date_ranges": [
+        { "start_date": "2025-12-20", "end_date": "2026-01-10" }
+      ]
+    },
+    {
+      "id": "SEA-005",
+      "resort_id": "RST-002",
+      "name": "High Season",
+      "description": "Whale shark season",
+      "date_ranges": [
+        { "start_date": "2025-01-11", "end_date": "2025-04-30" },
+        { "start_date": "2025-11-01", "end_date": "2025-12-19" }
+      ]
+    },
+    {
+      "id": "SEA-006",
+      "resort_id": "RST-002",
+      "name": "Low Season",
+      "description": "Green season",
+      "date_ranges": [
+        { "start_date": "2025-05-01", "end_date": "2025-10-31" }
+      ]
+    }
+  ],
+  "rates": [
+    {
+      "id": "RAT-001",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-001",
+      "season_id": "SEA-001",
+      "cost_amount": 850.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Beach Villa - Peak Season"
+    },
+    {
+      "id": "RAT-002",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-001",
+      "season_id": "SEA-002",
+      "cost_amount": 650.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Beach Villa - High Season"
+    },
+    {
+      "id": "RAT-003",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-001",
+      "season_id": "SEA-003",
+      "cost_amount": 450.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Beach Villa - Low Season"
+    },
+    {
+      "id": "RAT-004",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-002",
+      "season_id": "SEA-001",
+      "cost_amount": 1200.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Overwater Villa - Peak Season"
+    },
+    {
+      "id": "RAT-005",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-002",
+      "season_id": "SEA-002",
+      "cost_amount": 950.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Overwater Villa - High Season"
+    },
+    {
+      "id": "RAT-006",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-002",
+      "season_id": "SEA-003",
+      "cost_amount": 700.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Overwater Villa - Low Season"
+    },
+    {
+      "id": "RAT-007",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-003",
+      "season_id": "SEA-001",
+      "cost_amount": 2500.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Grand Water Villa - Peak Season"
+    },
+    {
+      "id": "RAT-008",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-003",
+      "season_id": "SEA-002",
+      "cost_amount": 1800.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Grand Water Villa - High Season"
+    },
+    {
+      "id": "RAT-009",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-003",
+      "season_id": "SEA-003",
+      "cost_amount": 1300.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Grand Water Villa - Low Season"
+    },
+    {
+      "id": "RAT-010",
+      "resort_id": "RST-002",
+      "room_type_id": "RT-004",
+      "season_id": "SEA-004",
+      "cost_amount": 600.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Sunset Bungalow - Peak"
+    },
+    {
+      "id": "RAT-011",
+      "resort_id": "RST-002",
+      "room_type_id": "RT-004",
+      "season_id": "SEA-005",
+      "cost_amount": 480.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Sunset Bungalow - High"
+    },
+    {
+      "id": "RAT-012",
+      "resort_id": "RST-002",
+      "room_type_id": "RT-004",
+      "season_id": "SEA-006",
+      "cost_amount": 350.00,
+      "currency_code": "USD",
+      "rate_type": "per_night",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Sunset Bungalow - Low"
+    }
+  ],
+  "extraPersonCharges": [
+    {
+      "id": "EPC-001",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-001",
+      "season_id": null,
+      "applies_to": "adult",
+      "pricing_mode": "PER_PERSON_PER_NIGHT",
+      "cost_amount": 150.00,
+      "currency_code": "USD",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Third adult in Beach Villa"
+    },
+    {
+      "id": "EPC-002",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-001",
+      "season_id": null,
+      "applies_to": "child",
+      "child_age_band_id": "CAB-003",
+      "pricing_mode": "PER_PERSON_PER_NIGHT",
+      "cost_amount": 75.00,
+      "currency_code": "USD",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Child 6-11 in Beach Villa"
+    },
+    {
+      "id": "EPC-003",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-001",
+      "season_id": null,
+      "applies_to": "child",
+      "child_age_band_id": "CAB-002",
+      "pricing_mode": "PER_PERSON_PER_NIGHT",
+      "cost_amount": 50.00,
+      "currency_code": "USD",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Toddler 2-5 in Beach Villa"
+    }
+  ],
+  "mealPlans": [
+    {
+      "id": "MP-001",
+      "resort_id": "RST-001",
+      "name": "Bed & Breakfast",
+      "code": "BB",
+      "description": "Daily breakfast included",
+      "pricing_mode": "PER_PERSON_PER_NIGHT",
+      "adult_cost": 65.00,
+      "child_costs_by_band": {
+        "CAB-001": 0.00,
+        "CAB-002": 25.00,
+        "CAB-003": 40.00
+      },
+      "currency_code": "USD",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "is_default": true
+    },
+    {
+      "id": "MP-002",
+      "resort_id": "RST-001",
+      "name": "Half Board",
+      "code": "HB",
+      "description": "Breakfast and dinner included",
+      "pricing_mode": "PER_PERSON_PER_NIGHT",
+      "adult_cost": 120.00,
+      "child_costs_by_band": {
+        "CAB-001": 0.00,
+        "CAB-002": 45.00,
+        "CAB-003": 70.00
+      },
+      "currency_code": "USD",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "is_default": false
+    },
+    {
+      "id": "MP-003",
+      "resort_id": "RST-001",
+      "name": "Full Board",
+      "code": "FB",
+      "description": "All meals included",
+      "pricing_mode": "PER_PERSON_PER_NIGHT",
+      "adult_cost": 175.00,
+      "child_costs_by_band": {
+        "CAB-001": 0.00,
+        "CAB-002": 65.00,
+        "CAB-003": 100.00
+      },
+      "currency_code": "USD",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "is_default": false
+    },
+    {
+      "id": "MP-004",
+      "resort_id": "RST-001",
+      "name": "All Inclusive",
+      "code": "AI",
+      "description": "All meals, selected beverages, and activities",
+      "pricing_mode": "PER_PERSON_PER_NIGHT",
+      "adult_cost": 280.00,
+      "child_costs_by_band": {
+        "CAB-001": 0.00,
+        "CAB-002": 95.00,
+        "CAB-003": 150.00
+      },
+      "currency_code": "USD",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "is_default": false
+    }
+  ],
+  "transferTypes": [
+    {
+      "id": "TT-001",
+      "resort_id": "RST-001",
+      "name": "Seaplane Transfer",
+      "code": "SEAPLANE",
+      "description": "Scenic seaplane flight from Malé (35 mins)",
+      "direction": "BOTH",
+      "pricing_mode": "PER_PERSON",
+      "adult_cost": 550.00,
+      "child_costs_by_band": {
+        "CAB-001": 0.00,
+        "CAB-002": 350.00,
+        "CAB-003": 350.00
+      },
+      "currency_code": "USD",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "is_default": true,
+      "notes": "Round trip transfer"
+    },
+    {
+      "id": "TT-002",
+      "resort_id": "RST-001",
+      "name": "Speedboat Transfer",
+      "code": "SPEEDBOAT",
+      "description": "Private speedboat from Malé (90 mins)",
+      "direction": "BOTH",
+      "pricing_mode": "PER_BOOKING",
+      "cost_amount": 800.00,
+      "currency_code": "USD",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "is_default": false,
+      "notes": "Round trip, up to 4 guests"
+    },
+    {
+      "id": "TT-003",
+      "resort_id": "RST-002",
+      "name": "Seaplane Transfer",
+      "code": "SEAPLANE",
+      "description": "Seaplane from Malé (25 mins)",
+      "direction": "BOTH",
+      "pricing_mode": "PER_PERSON",
+      "adult_cost": 480.00,
+      "child_costs_by_band": {
+        "CAB-004": 0.00,
+        "CAB-005": 300.00,
+        "CAB-006": 300.00
+      },
+      "currency_code": "USD",
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "is_default": true
+    }
+  ],
+  "activities": [
+    {
+      "id": "ACT-001",
+      "resort_id": "RST-001",
+      "name": "Sunset Dolphin Cruise",
+      "description": "2-hour cruise to spot dolphins at sunset",
+      "pricing_mode": "PER_PERSON",
+      "adult_cost": 85.00,
+      "child_costs_by_band": {
+        "CAB-001": 0.00,
+        "CAB-002": 45.00,
+        "CAB-003": 55.00
+      },
+      "currency_code": "USD",
+      "is_date_specific": false,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "is_active": true
+    },
+    {
+      "id": "ACT-002",
+      "resort_id": "RST-001",
+      "name": "Private Sandbank Picnic",
+      "description": "Exclusive picnic on a secluded sandbank",
+      "pricing_mode": "PER_BOOKING",
+      "cost_amount": 450.00,
+      "currency_code": "USD",
+      "is_date_specific": false,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "is_active": true
+    },
+    {
+      "id": "ACT-003",
+      "resort_id": "RST-002",
+      "name": "Whale Shark Excursion",
+      "description": "Swim with whale sharks (seasonal)",
+      "pricing_mode": "PER_PERSON",
+      "adult_cost": 150.00,
+      "child_costs_by_band": {
+        "CAB-004": 0.00,
+        "CAB-005": 0.00,
+        "CAB-006": 95.00
+      },
+      "currency_code": "USD",
+      "is_date_specific": false,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "is_active": true
+    }
+  ],
+  "taxConfigurations": [
+    {
+      "id": "TAX-001",
+      "resort_id": "RST-001",
+      "tax_type": "GREEN_TAX",
+      "name": "Maldives Green Tax",
+      "calculation_method": "FIXED_PER_PERSON_PER_NIGHT",
+      "rate_value": 6.00,
+      "currency_code": "USD",
+      "applies_to": "ACCOMMODATION_ONLY",
+      "is_cumulative_base": false,
+      "calculation_order": 1,
+      "applies_to_children": true,
+      "child_age_threshold": 2,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Government tax - $6/person/night for guests 2+"
+    },
+    {
+      "id": "TAX-002",
+      "resort_id": "RST-001",
+      "tax_type": "SERVICE_CHARGE",
+      "name": "Service Charge",
+      "calculation_method": "PERCENTAGE",
+      "rate_value": 10.00,
+      "applies_to": "SUBTOTAL_BEFORE_TAX",
+      "is_cumulative_base": true,
+      "calculation_order": 2,
+      "applies_to_children": true,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "10% service charge on all services"
+    },
+    {
+      "id": "TAX-003",
+      "resort_id": "RST-001",
+      "tax_type": "GST",
+      "name": "GST",
+      "calculation_method": "PERCENTAGE",
+      "rate_value": 16.00,
+      "applies_to": "CUMULATIVE",
+      "is_cumulative_base": false,
+      "calculation_order": 3,
+      "applies_to_children": true,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "16% GST on subtotal + service charge"
+    },
+    {
+      "id": "TAX-004",
+      "resort_id": "RST-002",
+      "tax_type": "GREEN_TAX",
+      "name": "Maldives Green Tax",
+      "calculation_method": "FIXED_PER_PERSON_PER_NIGHT",
+      "rate_value": 6.00,
+      "currency_code": "USD",
+      "applies_to": "ACCOMMODATION_ONLY",
+      "is_cumulative_base": false,
+      "calculation_order": 1,
+      "applies_to_children": true,
+      "child_age_threshold": 2,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31"
+    },
+    {
+      "id": "TAX-005",
+      "resort_id": "RST-002",
+      "tax_type": "SERVICE_CHARGE",
+      "name": "Service Charge",
+      "calculation_method": "PERCENTAGE",
+      "rate_value": 10.00,
+      "applies_to": "SUBTOTAL_BEFORE_TAX",
+      "is_cumulative_base": true,
+      "calculation_order": 2,
+      "applies_to_children": true,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31"
+    },
+    {
+      "id": "TAX-006",
+      "resort_id": "RST-002",
+      "tax_type": "GST",
+      "name": "GST",
+      "calculation_method": "PERCENTAGE",
+      "rate_value": 16.00,
+      "applies_to": "CUMULATIVE",
+      "is_cumulative_base": false,
+      "calculation_order": 3,
+      "applies_to_children": true,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31"
+    }
+  ],
+  "festiveSupplements": [
+    {
+      "id": "FS-001",
+      "resort_id": "RST-001",
+      "name": "Christmas Gala Dinner",
+      "description": "Mandatory gala dinner on Christmas Eve",
+      "trigger_dates": ["2025-12-24", "2026-12-24"],
+      "pricing_mode": "PER_PERSON",
+      "adult_cost": 350.00,
+      "child_costs_by_band": {
+        "CAB-001": 0.00,
+        "CAB-002": 125.00,
+        "CAB-003": 175.00
+      },
+      "currency_code": "USD",
+      "is_mandatory": true,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31"
+    },
+    {
+      "id": "FS-002",
+      "resort_id": "RST-001",
+      "name": "New Year's Eve Celebration",
+      "description": "Mandatory NYE celebration",
+      "trigger_dates": ["2025-12-31", "2026-12-31"],
+      "pricing_mode": "PER_PERSON",
+      "adult_cost": 500.00,
+      "child_costs_by_band": {
+        "CAB-001": 0.00,
+        "CAB-002": 175.00,
+        "CAB-003": 250.00
+      },
+      "currency_code": "USD",
+      "is_mandatory": true,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31"
+    }
+  ],
+  "discounts": [
+    {
+      "id": "DSC-001",
+      "resort_id": "RST-001",
+      "name": "Early Bird Special",
+      "code": "EARLY90",
+      "discount_type": "PERCENTAGE",
+      "discount_value": 15.00,
+      "base_type": "ROOM_ONLY",
+      "application_order": "BEFORE_TAX",
+      "booking_window_days": 90,
+      "is_stackable": false,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "eligibility_criteria": "Book 90+ days in advance for 15% off room rates"
+    },
+    {
+      "id": "DSC-002",
+      "resort_id": "RST-001",
+      "name": "Long Stay Discount",
+      "code": "STAY7",
+      "discount_type": "PERCENTAGE",
+      "discount_value": 10.00,
+      "base_type": "ROOM_ONLY",
+      "application_order": "BEFORE_TAX",
+      "minimum_nights": 7,
+      "is_stackable": true,
+      "stackable_with": ["DSC-001"],
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "eligibility_criteria": "10% off room rates for stays of 7+ nights"
+    },
+    {
+      "id": "DSC-003",
+      "resort_id": "RST-001",
+      "name": "Honeymoon Package",
+      "code": "HONEYMOON",
+      "discount_type": "FIXED",
+      "discount_value": 200.00,
+      "discount_currency_code": "USD",
+      "base_type": "PRE_TAX_TOTAL",
+      "application_order": "BEFORE_TAX",
+      "minimum_nights": 5,
+      "is_stackable": false,
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "eligibility_criteria": "$200 off for honeymoon couples (min 5 nights)"
+    }
+  ],
+  "blackoutDates": [
+    {
+      "id": "BLK-001",
+      "resort_id": "RST-001",
+      "room_type_id": null,
+      "start_date": "2025-12-30",
+      "end_date": "2026-01-02",
+      "reason": "Resort fully booked for New Year period",
+      "is_active": true
+    }
+  ],
+  "minimumStayRules": [
+    {
+      "id": "MSR-001",
+      "resort_id": "RST-001",
+      "room_type_id": null,
+      "season_id": "SEA-001",
+      "minimum_nights": 5,
+      "notes": "5-night minimum during Peak Season"
+    },
+    {
+      "id": "MSR-002",
+      "resort_id": "RST-001",
+      "room_type_id": "RT-003",
+      "season_id": null,
+      "minimum_nights": 3,
+      "notes": "Grand Water Villa always requires 3-night minimum"
+    },
+    {
+      "id": "MSR-003",
+      "resort_id": "RST-001",
+      "room_type_id": null,
+      "season_id": null,
+      "minimum_nights": 2,
+      "valid_from": "2025-12-24",
+      "valid_to": "2025-12-26",
+      "notes": "2-night minimum over Christmas"
+    }
+  ],
+  "markupConfigurations": [
+    {
+      "id": "MKP-001",
+      "scope": "RESORT",
+      "resort_id": "RST-001",
+      "markup_type": "PERCENTAGE",
+      "markup_value": 15.00,
+      "applies_to_taxes": false,
+      "excluded_components": ["GREEN_TAX"],
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "Standard 15% markup, no markup on taxes"
+    },
+    {
+      "id": "MKP-002",
+      "scope": "RESORT",
+      "resort_id": "RST-002",
+      "markup_type": "PERCENTAGE",
+      "markup_value": 12.00,
+      "applies_to_taxes": false,
+      "excluded_components": ["GREEN_TAX"],
+      "valid_from": "2025-01-01",
+      "valid_to": "2026-12-31",
+      "notes": "12% markup for Coral Dreams"
+    }
+  ],
+  "honeymoonPerks": [
+    {
+      "id": "HP-001",
+      "resort_id": "RST-001",
+      "name": "Romantic Turndown",
+      "description": "Flower petal decoration and champagne on arrival"
+    },
+    {
+      "id": "HP-002",
+      "resort_id": "RST-001",
+      "name": "Couples Spa Treatment",
+      "description": "Complimentary 60-minute couples massage"
+    },
+    {
+      "id": "HP-003",
+      "resort_id": "RST-001",
+      "name": "Sunset Cruise",
+      "description": "Private sunset cruise for two"
+    }
+  ]
+}

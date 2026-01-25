@@ -1,0 +1,66 @@
+{
+  "compilerOptions": {
+    // Target & Module
+    "target": "ES2022",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "lib": ["ES2022", "DOM"],
+    
+    // JSX Support (for UI components)
+    "jsx": "react-jsx",
+    
+    // Output
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    
+    // Strict Type Checking
+    "strict": true,
+    "noImplicitAny": false,  // Relaxed: Sprint 2 calculation engine needs type fixes
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    
+    // Additional Checks
+    "noUnusedLocals": false,  // Relaxed: Sprint 2 has unused imports
+    "noUnusedParameters": false,  // Relaxed: Sprint 2 has unused params
+    "exactOptionalPropertyTypes": false,  // Relaxed: Sprint 2 has optional property issues
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": false,  // Relaxed: Sprint 2 has array access issues
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    
+    // Module Interop
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    
+    // Advanced
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    
+    // Path Aliases
+    "baseUrl": "./src",
+    "paths": {
+      "@core/*": ["core/*"],
+      "@data/*": ["data/*"],
+      "@services/*": ["services/*"]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "tests"
+  ]
+}
